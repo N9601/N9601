@@ -1,0 +1,25 @@
+   b                 r                
+   b    oooooooooo   r                
+   b             o   r                
+   bbbbbbbbbbb   o   r   bbbbbbbbbbb  
+             b   o   r   b            
+             b   o   r   b            
+ ooooo    mmmmmmmmmmmmmmmmmm          
+     o    m                m     rrrrr
+     o    m m              m     r    
+     ooooom                mrrrrrr    
+          m  bbbbbbbbbbbb  m          
+          m     wwwww      m          
+bbbbbbbbbbm     mmmmm      mooooooooo 
+          m  ooooooooooo   m          
+          m    mmmmmmmm    m          
+      rrrrm  bbbbbbbbbbbb  mbbbbbbbbb 
+      r   m                m          
+      r   m                m          
+      r   mmmmmmmmmmmmmmmmmm          
+      r        o   b   r              
+ rrrrrr        o   b   rrrrrrrrrrr    
+               o   b             r    
+        oooooooo   b             r    
+        o          bbbbbbbb      r    
+        o                        r    

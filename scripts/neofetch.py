@@ -50,11 +50,13 @@ INFO = [
 
 THEMES = {
     "dark": dict(bg="#0b0b0b", border="#222", bar="#141414", fg="#c9d1d9", key="#ff7a33",
-                 val="#5c9bff", dot="#3a3a3a", head="#f5f5f5", ascii="#8fb4ff",
-                 add="#3fb950", rem="#ff4d5e", muted="#6b6b6b"),
+                 val="#5c9bff", dot="#3a3a3a", head="#f5f5f5",
+                 add="#3fb950", rem="#ff4d5e", muted="#6b6b6b",
+                 art=dict(b="#4d8dff", o="#ff7a33", r="#ff4d5e", m="#5a5a5a", w="#f5f5f5")),
     "light": dict(bg="#f6f8fa", border="#d0d7de", bar="#eaeef2", fg="#24292f", key="#c2410c",
-                  val="#0047b3", dot="#c0c6cc", head="#111", ascii="#3b4a66",
-                  add="#1a7f37", rem="#cf222e", muted="#8c959f"),
+                  val="#0047b3", dot="#c0c6cc", head="#111",
+                  add="#1a7f37", rem="#cf222e", muted="#8c959f",
+                  art=dict(b="#0058e0", o="#d9480f", r="#cf222e", m="#9aa3ad", w="#111")),
 }
 
 
@@ -164,13 +166,33 @@ def kv_line(key, value, t, width=WIDTH):
             f'<tspan fill="{t["val"]}">{escape(value)}</tspan>')
 
 
-def render(theme, stats, ascii_lines, up):
+def art_svg(lines, colors, t, cw, fs):
+    """One <text> per same-color run, each placed at its exact column so box
+    glyphs line up even if the viewer's font has slightly different advances.
+    Rows sit at the font's natural line height so vertical box glyphs touch."""
+    nat = fs * 1.17
+    out = []
+    for row, (line, keys) in enumerate(zip(lines, colors)):
+        col = 0
+        while col < len(line):
+            if line[col] == " ":
+                col += 1
+                continue
+            key, start = keys[col], col
+            while col < len(line) and line[col] != " " and keys[col] == key:
+                col += 1
+            fill = t["art"].get(key, t["fg"])
+            out.append(f'<text x="{start * cw:.1f}" y="{(row + 1) * nat:.1f}" '
+                       f'style="fill:{fill}">{escape(line[start:col])}</text>')
+    return "\n".join(out), len(lines) * nat
+
+
+def render(theme, stats, art, up):
     t = THEMES[theme]
     fs, lh, cw = 14, 19, 8.43  # font size, line height, approx monospace advance
     pad_x, top = 28, 62
-    ascii_w = max(len(l) for l in ascii_lines)
-    info_x = pad_x + (ascii_w + 3) * cw
-
+    lines, colors = art
+    info_x = pad_x + (max(len(l) for l in lines) + 3) * cw
     rows = []
     for item in INFO:
         kind = item[0]
@@ -205,14 +227,13 @@ def render(theme, stats, ascii_lines, up):
                 f'<tspan fill="{t["rem"]}">{r}</tspan><tspan fill="{t["fg"]}"> )</tspan>'
                 f'<tspan class="caret" fill="{t["val"]}"> _</tspan>')
 
-    n = max(len(rows), len(ascii_lines))
-    height = top + n * lh + 30
+    height = top + len(rows) * lh + 22
     width = int(info_x + (WIDTH + 1) * cw + pad_x)
-    a_off = top + max(0, (len(rows) - len(ascii_lines)) // 2) * lh
-
-    ascii_svg = "\n".join(
-        f'<text x="{pad_x}" y="{a_off + i * lh}" class="a" xml:space="preserve">{escape(l).replace(" ", " ")}</text>'
-        for i, l in enumerate(ascii_lines))
+    # Stretch the art vertically to span the info block.
+    body, art_h = art_svg(lines, colors, t, cw, fs)
+    span = (len(rows) - 1) * lh + fs * 0.3
+    ascii_svg = (f'<g transform="translate({pad_x} {top - fs:.1f}) scale(1 {span / art_h:.3f})">'
+                 f'\n{body}\n</g>')
     info_svg = "\n".join(
         f'<text x="{info_x:.1f}" y="{top + i * lh}">{r}</text>' for i, r in enumerate(rows) if r)
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -220,7 +241,6 @@ def render(theme, stats, ascii_lines, up):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" font-family="ConsolasFallback, Consolas, 'SFMono-Regular', Menlo, 'Courier New', monospace" font-size="{fs}px">
 <style>
   text {{ white-space: pre; fill: {t["fg"]}; }}
-  .a {{ fill: {t["ascii"]}; }}
   .caret {{ animation: blink 1s steps(1) infinite; }}
   @keyframes blink {{ 50% {{ opacity: 0; }} }}
 </style>
@@ -249,9 +269,10 @@ def main():
     start = BIRTHDAY or datetime.fromisoformat(stats["created"].replace("Z", "+00:00")).date()
     up = uptime(start, today) + ("" if BIRTHDAY else " (GitHub)")
 
-    ascii_lines = (ASSETS / "ascii.txt").read_text(encoding="utf-8").rstrip("\n").split("\n")
+    read = lambda name: (ASSETS / name).read_text(encoding="utf-8").rstrip("\n").split("\n")
+    art = (read("ascii.txt"), read("ascii-colors.txt"))
     for theme in THEMES:
-        (ASSETS / f"neofetch-{theme}.svg").write_text(render(theme, stats, ascii_lines, up), encoding="utf-8")
+        (ASSETS / f"neofetch-{theme}.svg").write_text(render(theme, stats, art, up), encoding="utf-8")
     print(json.dumps(stats, indent=2))
 
 

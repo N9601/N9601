@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [scripts/neofetch.py, assets/ascii.txt]
+    paths: [scripts/neofetch.py, scripts/chip.py]
 
 permissions:
   contents: write
