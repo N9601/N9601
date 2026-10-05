@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="949" height="624" viewBox="0 0 949 624" font-family="ConsolasFallback, Consolas, 'SFMono-Regular', Menlo, 'Courier New', monospace" font-size="14px">
+<style>
+  text { white-space: pre; fill: #24292f; }
+  .a { fill: #3b4a66; }
+  .caret { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+</style>
+<rect x="0.5" y="0.5" width="948" height="623" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<path d="M12.5 0.5 H936.5 a12 12 0 0 1 12 12 V34 H0.5 V12.5 a12 12 0 0 1 12 -12 Z" fill="#eaeef2"/>
+<line x1="0" y1="34" x2="949" y2="34" stroke="#d0d7de"/>
+<circle cx="22" cy="17.5" r="6" fill="#ff5f57"/><circle cx="42" cy="17.5" r="6" fill="#febc2e"/><circle cx="62" cy="17.5" r="6" fill="#28c840"/>
+<text x="474.5" y="22" text-anchor="middle" font-size="12px" fill="#8c959f" style="fill:#8c959f">nanda@kishore: ~ $ neofetch</text>
+<text x="933" y="22" text-anchor="end" font-size="11px" style="fill:#8c959f">2026-10-05 12:37 UTC</text>
+<text x="28" y="81" class="a" xml:space="preserve"></text>
+<text x="28" y="100" class="a" xml:space="preserve">                 _}(|()}_</text>
+<text x="28" y="119" class="a" xml:space="preserve">              {(__-]--?[)})]</text>
+<text x="28" y="138" class="a" xml:space="preserve">            {-!^&#x27;:;;;.,I!,;li?</text>
+<text x="28" y="157" class="a" xml:space="preserve">          ,;^.`Iili[1)(1]{?!+:|</text>
+<text x="28" y="176" class="a" xml:space="preserve">         ^i,^?|rxruvuvvuvXz{}Itn</text>
+<text x="28" y="195" class="a" xml:space="preserve">         Ii:)rnuvcvcczYYUYYnt-uY(</text>
+<text x="28" y="214" class="a" xml:space="preserve">        ,lI!(/())(||)[?_-{{)(_cUn+</text>
+<text x="28" y="233" class="a" xml:space="preserve">        :IIilI.`^ &#x27;1i  I_~Irv(znc(</text>
+<text x="28" y="252" class="a" xml:space="preserve">        :,1/{!~!!!jwbj;++]f0JvrxC-</text>
+<text x="28" y="271" class="a" xml:space="preserve">        .^{txjjr)jfcXJz/xzJUXxrm/&#x27;</text>
+<text x="28" y="290" class="a" xml:space="preserve">        ; ]j/jrj)1]){|rffjnuvtvr,</text>
+<text x="28" y="309" class="a" xml:space="preserve">         :,~1(({[)/ffuxtfnxxxr1^I</text>
+<text x="28" y="328" class="a" xml:space="preserve">          .&#x27;i1(((fftruYYjjrrtj|l</text>
+<text x="28" y="347" class="a" xml:space="preserve">          ;  &#x27;?{]}1jxrj/)(|{{jti</text>
+<text x="28" y="366" class="a" xml:space="preserve">         -/[|xx-]-?[(){{{}[1jx[fOz(</text>
+<text x="28" y="385" class="a" xml:space="preserve">      }rYJJQJm|;{][[[{}}{)|tf/npok#apJf</text>
+<text x="28" y="404" class="a" xml:space="preserve">   /Y0O0LCJUYYUj}[]]][{)|fnYQwdpb*W%8#&amp;Maq</text>
+<text x="28" y="423" class="a" xml:space="preserve">{c0ZOO0LLQLCCJJCJzvuuvzYJQOO0QmhW8&amp;*a8*pB$</text>
+<text x="28" y="442" class="a" xml:space="preserve">qmmmZZOO0LCCCCJUUCCCCCCLQQL0wa&amp;8&amp;M*M@hqB$#</text>
+<text x="28" y="461" class="a" xml:space="preserve">dwqpppwZpqmZO0QQLLQQQL00OZboM88&amp;M#%@ddBBMZ</text>
+<text x="28" y="480" class="a" xml:space="preserve">dqwphhkpwqddppppqwwmmpddh*W8%8&amp;W8@8bh8&amp;%oQ</text>
+<text x="28" y="499" class="a" xml:space="preserve">bdpwphhhkbkkhbbahabbaboM8@@%8&amp;8%%#koB@@$%J</text>
+<text x="28" y="518" class="a" xml:space="preserve">pqkdmbaaoahoaaqmddqwoOkh%BBB888WM#&amp;@$$%$*J</text>
+<text x="28" y="537" class="a" xml:space="preserve">dOwqqpoah*od**abkkdko*hk8B@W&amp;8&amp;#hW@&amp;$@B$oU</text>
+<text x="28" y="556" class="a" xml:space="preserve">hpOmObqOkak0aWmbo#hh*M&amp;#ak*hq*&amp;*p08W&amp;*b#&amp;Z</text>
+<text x="407.3" y="62"><tspan fill="#111" font-weight="700">nanda@kishore</tspan><tspan fill="#c0c6cc"> ----------------------------------------------</tspan></text>
+<text x="407.3" y="81"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">OS</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ..................... </tspan><tspan fill="#0047b3">Windows 11, Android, Linux (WSL)</tspan></text>
+<text x="407.3" y="100"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Uptime</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .............. </tspan><tspan fill="#0047b3">3 years, 4 months, 24 days (GitHub)</tspan></text>
+<text x="407.3" y="119"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Host</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ....................................... </tspan><tspan fill="#0047b3">Verge Scales</tspan></text>
+<text x="407.3" y="138"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Kernel</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .............. </tspan><tspan fill="#0047b3">Full-Stack &amp; AI Automation Engineer</tspan></text>
+<text x="407.3" y="157"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">IDE</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ................................ </tspan><tspan fill="#0047b3">VS Code, Claude Code</tspan></text>
+<text x="407.3" y="195"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Languages.Programming</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ...... </tspan><tspan fill="#0047b3">Go, TypeScript, Java, Python</tspan></text>
+<text x="407.3" y="214"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Languages.Systems</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ............. </tspan><tspan fill="#0047b3">C, C++, x86 Assembly, SQL</tspan></text>
+<text x="407.3" y="233"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Languages.Real</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ................... </tspan><tspan fill="#0047b3">English, Telugu, Hindi</tspan></text>
+<text x="407.3" y="271"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Building</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .................... </tspan><tspan fill="#0047b3">OrderFlow, SolderDB, PyroOS</tspan></text>
+<text x="407.3" y="290"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Hobbies.Software</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .............. </tspan><tspan fill="#0047b3">Android ROMs, Perf Tuning</tspan></text>
+<text x="407.3" y="309"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Hobbies.Analog</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ................ </tspan><tspan fill="#0047b3">Music, Films, Photography</tspan></text>
+<text x="407.3" y="347"><tspan fill="#c0c6cc">- </tspan><tspan fill="#111" font-weight="700">Education</tspan><tspan fill="#c0c6cc"> ------------------------------------------------</tspan></text>
+<text x="407.3" y="366"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">B.Tech CSE</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ........................ </tspan><tspan fill="#0047b3">VNR VJIET, 2026 - now</tspan></text>
+<text x="407.3" y="385"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Diploma CSE</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ........................... </tspan><tspan fill="#0047b3">CGPA 9.18, top 1%</tspan></text>
+<text x="407.3" y="423"><tspan fill="#c0c6cc">- </tspan><tspan fill="#111" font-weight="700">Contact</tspan><tspan fill="#c0c6cc"> --------------------------------------------------</tspan></text>
+<text x="407.3" y="442"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Email</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .................... </tspan><tspan fill="#0047b3">nandakishorereddyg@outlook.com</tspan></text>
+<text x="407.3" y="461"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">LinkedIn</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ............................. </tspan><tspan fill="#0047b3">gnandakishorereddy</tspan></text>
+<text x="407.3" y="480"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">dev.to</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ............................................ </tspan><tspan fill="#0047b3">n9601</tspan></text>
+<text x="407.3" y="518"><tspan fill="#c0c6cc">- </tspan><tspan fill="#111" font-weight="700">GitHub Stats</tspan><tspan fill="#c0c6cc"> ---------------------------------------------</tspan></text>
+<text x="407.3" y="537"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Repos</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .... </tspan><tspan fill="#0047b3">15 {Contributed: 2}</tspan><tspan fill="#c0c6cc"> | </tspan><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Stars</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ............. </tspan><tspan fill="#0047b3">3</tspan></text>
+<text x="407.3" y="556"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Commits</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> .................. </tspan><tspan fill="#0047b3">685</tspan><tspan fill="#c0c6cc"> | </tspan><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Followers</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ......... </tspan><tspan fill="#0047b3">7</tspan></text>
+<text x="407.3" y="575"><tspan fill="#c0c6cc">. </tspan><tspan fill="#c2410c">Lines of Code</tspan><tspan fill="#24292f">:</tspan><tspan fill="#c0c6cc"> ........... </tspan><tspan fill="#0047b3">247,364</tspan><tspan fill="#24292f"> ( </tspan><tspan fill="#1a7f37">271,859++</tspan><tspan fill="#24292f">, </tspan><tspan fill="#cf222e">24,495--</tspan><tspan fill="#24292f"> )</tspan><tspan class="caret" fill="#0047b3"> _</tspan></text>
+</svg>

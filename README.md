@@ -18,6 +18,20 @@
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
+### `$ neofetch`
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/neofetch-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="assets/neofetch-light.svg"/>
+  <img src="assets/neofetch-dark.svg" width="100%" alt="neofetch-style profile card: Nandakishore Reddy, full-stack and AI automation engineer at Verge Scales, with live GitHub stats"/>
+</picture>
+</p>
+
+<sub><p align="center">stats refresh daily via GitHub Actions</p></sub>
+
+<img src="assets/divider.svg" width="100%" alt=""/>
+
 ### `$ whoami`
 
 ```go
@@ -51,7 +65,7 @@ var me = Engineer{
 
 ### `$ cat ./now.log`
 
-> Joined **Verge Scales** in Jan 2026 and stayed on the team as annual revenue grew from **5-figure to 8-figure (INR 3 Cr+)**, splitting time between engineering, operations and customer support.
+> Joined **Verge Scales** in Jan 2026 and stayed on the team as annual revenue grew from **5-figure to 8-figure**, splitting time between engineering, operations and customer support.
 
 <table>
 <tr>
