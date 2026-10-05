@@ -191,8 +191,16 @@ card("algowizard", "03", "AlgoWizard", "FULL-STACK · EDTECH", ORANGE,
      ["Real-time visualizations of data structures and", "algorithms, with Supabase auth and per-user",
       "progress. Smooth even at high step counts."],
      ["Next.js", "TypeScript", "Supabase"], "LIVE")
-card("coefficient", "04", "Coefficient", "FRONTEND · SIMULATOR", BLUE,
-     ["Browser-based logic-gate and architecture", "simulator built from reusable logic components,",
-      "server-rendered for a fast first load."],
-     ["Next.js", "React", "SSR"], "LIVE")
+card("flowcad", "04", "FlowCAD", "GRAPHICS · 3D CAD", BLUE,
+     ["Parametric 3D CAD in one browser tab:", "booleans, fillets, FDM print check, blueprint",
+      "export. Manifold WASM kernel in a Web Worker."],
+     ["TypeScript", "three.js", "WASM"], "SHIPPED")
+card("truthbox", "05", "Truthbox", "HACKATHON · TRUST", RED,
+     ["AR-verified unboxing with a cryptographic", "chain of custody: per-frame SHA-256 chain,",
+      "Merkle root, ECDSA-signed manifests."],
+     ["JavaScript", "WebCrypto", "PWA"], "LIVE")
+card("tarang", "06", "Tarang", "SIH 2026 · HYDROLOGY", ORANGE,
+     ["Flash-flood early warning for Himalayan", "catchments. Physical terrain + hydrology",
+      "model forecasts the peak per settlement."],
+     ["Python", "NumPy", "Flask"], "PROTOTYPE")
 print("wrote", sorted(p.name for p in OUT.iterdir()))

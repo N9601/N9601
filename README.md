@@ -103,8 +103,12 @@ var me = Engineer{
 <td><a href="https://github.com/N9601/PyroOS"><img src="assets/card-pyroos.svg" width="100%" alt="PyroOS"/></a></td>
 </tr>
 <tr>
+<td><a href="https://github.com/N9601/FlowCAD"><img src="assets/card-flowcad.svg" width="100%" alt="FlowCAD"/></a></td>
 <td><a href="https://github.com/N9601/algowizard"><img src="assets/card-algowizard.svg" width="100%" alt="AlgoWizard"/></a></td>
-<td><a href="https://github.com/N9601/coefficient"><img src="assets/card-coefficient.svg" width="100%" alt="Coefficient"/></a></td>
+</tr>
+<tr>
+<td><a href="https://n9601.github.io/IQOO2k26/"><img src="assets/card-truthbox.svg" width="100%" alt="Truthbox"/></a></td>
+<td><a href="https://github.com/N9601/Tarang"><img src="assets/card-tarang.svg" width="100%" alt="Tarang"/></a></td>
 </tr>
 </table>
 
@@ -129,10 +133,15 @@ var me = Engineer{
 </details>
 
 <details>
-<summary><b>Also built</b></summary>
+<summary><b>More repos</b></summary>
 <br/>
 
-- **[Personal Portfolio](https://personal-portfolio-five-liard-62.vercel.app)** : exploded-motherboard hero in Three.js with hand-written GLSL PCB-trace shaders, cursor-magnetic component physics and a draggable project card stack.
+| Repo | What it is | Stack |
+|---|---|---|
+| [**Cinder**](https://github.com/N9601/Cinder) | Chrome extension that turns YouTube videos into Obsidian notes via Gemini, with `[[wikilinks]]` into your existing vault | JavaScript, Gemini, Chrome MV3 |
+| [**Akashavani**](https://github.com/N9601/Skyscanner-Rebuild) &nbsp;<sub>[live](https://akashavani-mauve.vercel.app)</sub> | Travel meta-search rebuild for the RE:BUILD hackathon: flights, stays, cars, price alerts, AI assistant | React, TypeScript, TanStack Query, Zustand |
+| [**Truthbox**](https://github.com/N9601/IQOO2k26) &nbsp;<sub>[live](https://n9601.github.io/IQOO2k26/)</sub> | Source for the card above, iQOO Hackathon 2026 | JavaScript, WebCrypto |
+| [**Personal Portfolio**](https://github.com/N9601/personal-portfolio-final) &nbsp;<sub>[live](https://personal-portfolio-five-liard-62.vercel.app)</sub> | Exploded-motherboard hero in Three.js with hand-written GLSL PCB-trace shaders and cursor-magnetic physics | Next.js, Three.js, GLSL, GSAP |
 
 </details>
 
