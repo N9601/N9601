@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+<style>
+  .t { fill:none; stroke-width:2; stroke-dasharray:140 600; stroke-dashoffset:740; animation: run 3.2s linear infinite; }
+  .tb { fill:none; stroke-width:1; opacity:.18; }
+  @keyframes run { to { stroke-dashoffset:0; } }
+  .pulse { animation: pulse 1.6s ease-in-out infinite; transform-origin:center; transform-box:fill-box; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.25; } }
+  .core { animation: core 2.4s ease-in-out infinite; }
+  @keyframes core { 0%,100% { fill-opacity:.10; } 50% { fill-opacity:.32; } }
+  .caret { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+  .rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+  .scan { animation: scan 6s linear infinite; }
+  @keyframes scan { from { transform:translateY(-40px); } to { transform:translateY(400px); } }
+</style>
+<defs>
+  <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  </pattern>
+  <radialGradient id="glow" cx="0.8" cy="0.5" r="0.55">
+    <stop offset="0" stop-color="#0066ff" stop-opacity="0.30"/>
+    <stop offset="0.5" stop-color="#ff5500" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#080808" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="scanline" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#0066ff" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0066ff" stop-opacity="0.10"/>
+  </linearGradient>
+  <clipPath id="frame"><rect width="1200" height="360" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="360" fill="#080808"/>
+<rect width="1200" height="360" fill="url(#g)"/>
+<rect width="1200" height="360" fill="url(#glow)"/>
+<rect class="scan" width="1200" height="40" fill="url(#scanline)"/>
+
+<g transform="translate(48,44)">
+  <rect width="14" height="14" fill="#0066ff"/>
+  <text x="26" y="12" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="4" fill="#f5f5f5">N9601 / FULL-STACK + SYSTEMS</text>
+  <text x="26" y="32" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="3" fill="#6b6b6b">// HYDERABAD, IN  ·  IST UTC+5:30</text>
+</g>
+
+<g transform="translate(48,0)">
+  <text class="rise" x="0" y="190" font-family="'Space Grotesk', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="300" letter-spacing="-4" fill="#f5f5f5">NANDAKISHORE<tspan fill="#0066ff">.</tspan></text>
+  <text class="rise" style="animation-delay:.2s" x="4" y="232" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="3" fill="#0066ff">FULL-STACK ENGINEER  <tspan fill="#6b6b6b">/</tspan>  <tspan fill="#ff5500">LSM ENGINES</tspan>  <tspan fill="#6b6b6b">/</tspan>  <tspan fill="#ff1133">x86 KERNELS</tspan></text>
+  <text class="rise" style="animation-delay:.4s" x="4" y="300" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#6b6b6b">&gt; <tspan fill="#f5f5f5">shipping orderflow at verge scales, building solderdb + pyroos</tspan><tspan class="caret" fill="#0066ff"> _</tspan></text>
+</g>
+
+<path d="M760 70 H820 V120 H870" class="t" stroke="#0066ff" style="animation-delay:0.0s"/><path d="M760 70 H820 V120 H870" class="tb" stroke="#0066ff"/>
+<path d="M740 180 H870" class="t" stroke="#ff5500" style="animation-delay:0.6s"/><path d="M740 180 H870" class="tb" stroke="#ff5500"/>
+<path d="M760 290 H820 V240 H870" class="t" stroke="#ff1133" style="animation-delay:1.2s"/><path d="M760 290 H820 V240 H870" class="tb" stroke="#ff1133"/>
+<path d="M1150 90 H1090 V130 H1030" class="t" stroke="#0066ff" style="animation-delay:1.8s"/><path d="M1150 90 H1090 V130 H1030" class="tb" stroke="#0066ff"/>
+<path d="M1170 180 H1030" class="t" stroke="#ff5500" style="animation-delay:0.3s"/><path d="M1170 180 H1030" class="tb" stroke="#ff5500"/>
+<path d="M1150 270 H1090 V230 H1030" class="t" stroke="#ff1133" style="animation-delay:0.9s"/><path d="M1150 270 H1090 V230 H1030" class="tb" stroke="#ff1133"/>
+<path d="M950 20 V100" class="t" stroke="#0066ff" style="animation-delay:1.5s"/><path d="M950 20 V100" class="tb" stroke="#0066ff"/>
+<path d="M950 340 V260" class="t" stroke="#ff5500" style="animation-delay:2.1s"/><path d="M950 340 V260" class="tb" stroke="#ff5500"/>
+
+<g>
+  <rect x="860" y="116" width="10" height="4" fill="#6b6b6b"/><rect x="1030" y="116" width="10" height="4" fill="#6b6b6b"/><rect x="860" y="142" width="10" height="4" fill="#6b6b6b"/><rect x="1030" y="142" width="10" height="4" fill="#6b6b6b"/><rect x="860" y="168" width="10" height="4" fill="#6b6b6b"/><rect x="1030" y="168" width="10" height="4" fill="#6b6b6b"/><rect x="860" y="194" width="10" height="4" fill="#6b6b6b"/><rect x="1030" y="194" width="10" height="4" fill="#6b6b6b"/><rect x="860" y="220" width="10" height="4" fill="#6b6b6b"/><rect x="1030" y="220" width="10" height="4" fill="#6b6b6b"/><rect x="860" y="246" width="10" height="4" fill="#6b6b6b"/><rect x="1030" y="246" width="10" height="4" fill="#6b6b6b"/><rect x="886" y="90" width="4" height="10" fill="#6b6b6b"/><rect x="886" y="260" width="4" height="10" fill="#6b6b6b"/><rect x="912" y="90" width="4" height="10" fill="#6b6b6b"/><rect x="912" y="260" width="4" height="10" fill="#6b6b6b"/><rect x="938" y="90" width="4" height="10" fill="#6b6b6b"/><rect x="938" y="260" width="4" height="10" fill="#6b6b6b"/><rect x="964" y="90" width="4" height="10" fill="#6b6b6b"/><rect x="964" y="260" width="4" height="10" fill="#6b6b6b"/><rect x="990" y="90" width="4" height="10" fill="#6b6b6b"/><rect x="990" y="260" width="4" height="10" fill="#6b6b6b"/><rect x="1016" y="90" width="4" height="10" fill="#6b6b6b"/><rect x="1016" y="260" width="4" height="10" fill="#6b6b6b"/>
+  <rect x="870" y="100" width="160" height="160" rx="6" fill="#0d0d0d" stroke="#2a2a2a"/>
+  <rect class="core" x="884" y="114" width="132" height="132" rx="3" fill="#0066ff" stroke="#0066ff" stroke-opacity=".5"/>
+  <circle cx="882" cy="112" r="3" fill="#6b6b6b"/>
+  <text x="950" y="172" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="2" fill="#f5f5f5">NKR</text>
+  <text x="950" y="194" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="3" fill="#6b6b6b">GO · TS · C · ASM</text>
+  <text x="950" y="214" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" letter-spacing="2" fill="#0066ff">REV 2026</text>
+</g>
+
+<g transform="translate(1000,44)">
+  <circle class="pulse" cx="6" cy="6" r="6" fill="#ff1133"/>
+  <text x="20" y="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#f5f5f5">ONLINE</text>
+</g>
+
+<rect x="0.5" y="0.5" width="1199" height="359" rx="14" fill="none" stroke="#222"/>
+</g>
+</svg>

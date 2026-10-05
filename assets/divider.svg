@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24">
+<style>
+  .p { animation: p 4s linear infinite; }
+  @keyframes p { from { transform:translateX(-200px); } to { transform:translateX(1200px); } }
+</style>
+<defs>
+  <linearGradient id="l" x1="0" x2="1">
+    <stop offset="0" stop-color="#0066ff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#0066ff"/>
+    <stop offset="1" stop-color="#ff5500" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<line x1="0" y1="12" x2="1200" y2="12" stroke="#2a2a2a" stroke-width="1"/>
+<rect class="p" x="0" y="11" width="200" height="2" fill="url(#l)"/>
+<rect x="596" y="8" width="8" height="8" fill="#080808" stroke="#0066ff"/>
+</svg>
