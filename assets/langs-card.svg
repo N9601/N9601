@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="195" viewBox="0 0 300 195" font-family="'Segoe UI', Ubuntu, sans-serif">
+<rect x="0.5" y="0.5" width="299" height="194" rx="4.5" fill="#080808" stroke="#1a1a1a"/>
+<text x="25" y="35" font-size="18" font-weight="600" fill="#0066ff">Most Used Languages</text>
+<clipPath id="c"><rect x="25" y="52" width="250" height="8" rx="4"/></clipPath><g clip-path="url(#c)"><rect x="25.0" y="52" width="157.0" height="8" fill="#3178c6"/><rect x="182.0" y="52" width="29.5" height="8" fill="#f1e05a"/><rect x="211.4" y="52" width="21.0" height="8" fill="#3572a5"/><rect x="232.4" y="52" width="14.4" height="8" fill="#00add8"/><rect x="246.8" y="52" width="10.3" height="8" fill="#8a8a8a"/><rect x="257.1" y="52" width="9.6" height="8" fill="#7952b3"/><rect x="266.8" y="52" width="4.0" height="8" fill="#e34c26"/><rect x="270.7" y="52" width="1.5" height="8" fill="#6e4c13"/></g>
+<circle cx="31" cy="81" r="5" fill="#3178c6"/><text x="43" y="85" font-size="12" fill="#f5f5f5">TypeScript <tspan fill="#6b6b6b">62.8%</tspan></text>
+<circle cx="161" cy="81" r="5" fill="#f1e05a"/><text x="173" y="85" font-size="12" fill="#f5f5f5">JavaScript <tspan fill="#6b6b6b">11.8%</tspan></text>
+<circle cx="31" cy="105" r="5" fill="#3572a5"/><text x="43" y="109" font-size="12" fill="#f5f5f5">Python <tspan fill="#6b6b6b">8.4%</tspan></text>
+<circle cx="161" cy="105" r="5" fill="#00add8"/><text x="173" y="109" font-size="12" fill="#f5f5f5">Go <tspan fill="#6b6b6b">5.8%</tspan></text>
+<circle cx="31" cy="129" r="5" fill="#8a8a8a"/><text x="43" y="133" font-size="12" fill="#f5f5f5">C <tspan fill="#6b6b6b">4.1%</tspan></text>
+<circle cx="161" cy="129" r="5" fill="#7952b3"/><text x="173" y="133" font-size="12" fill="#f5f5f5">CSS <tspan fill="#6b6b6b">3.9%</tspan></text>
+<circle cx="31" cy="153" r="5" fill="#e34c26"/><text x="43" y="157" font-size="12" fill="#f5f5f5">HTML <tspan fill="#6b6b6b">1.6%</tspan></text>
+<circle cx="161" cy="153" r="5" fill="#6e4c13"/><text x="173" y="157" font-size="12" fill="#f5f5f5">Assembly <tspan fill="#6b6b6b">0.6%</tspan></text>
+</svg>

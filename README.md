@@ -172,8 +172,8 @@ var me = Engineer{
 ### `$ git log --stat`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=N9601&show_icons=true&hide_border=true&bg_color=080808&title_color=0066FF&icon_color=FF5500&text_color=F5F5F5&ring_color=0066FF&count_private=true" height="165" alt="GitHub stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=N9601&layout=compact&hide_border=true&bg_color=080808&title_color=0066FF&text_color=F5F5F5&langs_count=8" height="165" alt="Top languages"/>
+  <img src="assets/stats-card.svg" height="165" alt="GitHub stats"/>
+  <img src="assets/langs-card.svg" height="165" alt="Top languages"/>
 </p>
 
 <p align="center">
