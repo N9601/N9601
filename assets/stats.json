@@ -4,7 +4,79 @@
   "contributed": 1,
   "stars": 3,
   "followers": 7,
-  "commits": 785,
-  "additions": 191372,
-  "deletions": 18746
+  "commits": 786,
+  "additions": 191461,
+  "deletions": 18789,
+  "per_repo": {
+    "N9601/algowizard": {
+      "commits": 98,
+      "additions": 30500,
+      "deletions": 3700
+    },
+    "N9601/coefficient": {
+      "commits": 38,
+      "additions": 11633,
+      "deletions": 1250
+    },
+    "pritishshetty-verge/OrderFlowAiFinal": {
+      "commits": 68,
+      "additions": 34472,
+      "deletions": 5350
+    },
+    "N9601/SolderDB": {
+      "commits": 87,
+      "additions": 22150,
+      "deletions": 1710
+    },
+    "N9601/Cinder": {
+      "commits": 19,
+      "additions": 2532,
+      "deletions": 379
+    },
+    "N9601/PyroOS": {
+      "commits": 110,
+      "additions": 7077,
+      "deletions": 595
+    },
+    "N9601/Tarang": {
+      "commits": 74,
+      "additions": 17996,
+      "deletions": 3065
+    },
+    "N9601/Skyscanner-Rebuild": {
+      "commits": 46,
+      "additions": 12341,
+      "deletions": 586
+    },
+    "N9601/personal-portfolio-final": {
+      "commits": 1,
+      "additions": 18406,
+      "deletions": 0
+    },
+    "N9601/FlowCAD": {
+      "commits": 143,
+      "additions": 12079,
+      "deletions": 1323
+    },
+    "N9601/IQOO2k26": {
+      "commits": 89,
+      "additions": 4128,
+      "deletions": 362
+    },
+    "N9601/N9601": {
+      "commits": 8,
+      "additions": 1766,
+      "deletions": 276
+    },
+    "N9601/anumati": {
+      "commits": 2,
+      "additions": 4273,
+      "deletions": 1
+    },
+    "N9601/portfoliov2": {
+      "commits": 3,
+      "additions": 12108,
+      "deletions": 192
+    }
+  }
 }
