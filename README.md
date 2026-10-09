@@ -177,7 +177,7 @@ var me = Engineer{
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=N9601&hide_border=true&background=080808&ring=0066FF&fire=FF5500&currStreakLabel=0066FF&sideLabels=F5F5F5&currStreakNum=F5F5F5&sideNums=F5F5F5&dates=6B6B6B&stroke=1A1A1A" alt="Streak"/>
+  <img src="assets/streak.svg" alt="Contribution streak"/>
 </p>
 
 <picture>
