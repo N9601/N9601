@@ -184,8 +184,8 @@ card("solderdb", "01", "SolderDB", "SYSTEMS · DATABASE", BLUE,
       "bloom filters. PocketBase-style backend on top."],
      ["Go", "Wails", "React", "SSE"], "SHIPPED")
 card("pyroos", "02", "PyroOS", "SYSTEMS · KERNEL", RED,
-     ["x86 hobby OS. Assembly bootloader flips real", "mode to protected mode, sets up GDT and IDT,",
-      "then hands off to a C kernel with VGA output."],
+     ["x86 OS from the boot sector up: paging, heap,", "a filesystem, preemptive multitasking, ring-3",
+      "processes with fork and wait, an ELF loader."],
      ["x86 ASM", "C", "QEMU"], "BOOTING")
 card("algowizard", "03", "AlgoWizard", "FULL-STACK · EDTECH", ORANGE,
      ["Real-time visualizations of data structures and", "algorithms, with Supabase auth and per-user",
