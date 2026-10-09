@@ -6,6 +6,9 @@ Without a token the stats block falls back to the last values in assets/stats.js
 """
 import json
 import os
+import sys
+import time
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timezone
 from html import escape
@@ -60,20 +63,66 @@ THEMES = {
 }
 
 
-def gql(token, query, variables=None):
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=json.dumps({"query": query, "variables": variables or {}}).encode(),
-        headers={"Authorization": f"bearer {token}", "User-Agent": USER},
-    )
-    with urllib.request.urlopen(req, timeout=60) as r:
-        out = json.load(r)
-    if "errors" in out:
-        raise RuntimeError(out["errors"])
-    return out["data"]
+def gql(token, query, variables=None, attempts=5):
+    """POST a GraphQL query, retrying transient HTTP, network and API errors with backoff."""
+    last = None
+    for i in range(attempts):
+        if i:
+            time.sleep(2 ** i)
+        req = urllib.request.Request(
+            "https://api.github.com/graphql",
+            data=json.dumps({"query": query, "variables": variables or {}}).encode(),
+            headers={"Authorization": f"bearer {token}", "User-Agent": USER},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                out = json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code < 500 and e.code not in (403, 429):
+                raise
+            last = e
+            continue
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            last = e
+            continue
+        if "errors" in out:
+            last = RuntimeError(out["errors"])
+            continue
+        return out["data"]
+    raise last
 
 
-def fetch_stats(token):
+def repo_totals(token, repo, uid):
+    commits = adds = dels = 0
+    cursor = None
+    while True:
+        ref = gql(token, """
+        query($owner: String!, $name: String!, $uid: ID!, $after: String) {
+          repository(owner: $owner, name: $name) {
+            defaultBranchRef { target { ... on Commit {
+              history(first: 100, after: $after, author: { id: $uid }) {
+                totalCount pageInfo { hasNextPage endCursor }
+                nodes { additions deletions }
+              }
+            } } }
+          }
+        }""", {"owner": repo["owner"]["login"], "name": repo["name"], "uid": uid, "after": cursor})
+        branch = ref["repository"]["defaultBranchRef"]
+        if not branch:
+            break
+        hist = branch["target"]["history"]
+        if cursor is None:
+            commits = hist["totalCount"]
+        for n in hist["nodes"]:
+            adds += n["additions"]
+            dels += n["deletions"]
+        if not hist["pageInfo"]["hasNextPage"]:
+            break
+        cursor = hist["pageInfo"]["endCursor"]
+    return {"commits": commits, "additions": adds, "deletions": dels}
+
+
+def fetch_stats(token, prev):
     d = gql(token, """
     query($login: String!) {
       user(login: $login) {
@@ -103,33 +152,19 @@ def fetch_stats(token):
             break
         cursor = page["pageInfo"]["endCursor"]
 
-    commits = adds = dels = 0
+    prev_repos = prev.get("per_repo", {})
+    per_repo = {}
     for repo in repos:
-        cursor = None
-        while True:
-            ref = gql(token, """
-            query($owner: String!, $name: String!, $uid: ID!, $after: String) {
-              repository(owner: $owner, name: $name) {
-                defaultBranchRef { target { ... on Commit {
-                  history(first: 100, after: $after, author: { id: $uid }) {
-                    totalCount pageInfo { hasNextPage endCursor }
-                    nodes { additions deletions }
-                  }
-                } } }
-              }
-            }""", {"owner": repo["owner"]["login"], "name": repo["name"], "uid": uid, "after": cursor})
-            branch = ref["repository"]["defaultBranchRef"]
-            if not branch:
-                break
-            hist = branch["target"]["history"]
-            if cursor is None:
-                commits += hist["totalCount"]
-            for n in hist["nodes"]:
-                adds += n["additions"]
-                dels += n["deletions"]
-            if not hist["pageInfo"]["hasNextPage"]:
-                break
-            cursor = hist["pageInfo"]["endCursor"]
+        key = f'{repo["owner"]["login"]}/{repo["name"]}'
+        try:
+            per_repo[key] = repo_totals(token, repo, uid)
+        except Exception as e:
+            # Keep the last known numbers so one flaky repo cannot zero out or crash the card.
+            print(f"warning: {key}: {e}; using cached value", file=sys.stderr)
+            per_repo[key] = prev_repos.get(key, {"commits": 0, "additions": 0, "deletions": 0})
+    commits = sum(v["commits"] for v in per_repo.values())
+    adds = sum(v["additions"] for v in per_repo.values())
+    dels = sum(v["deletions"] for v in per_repo.values())
 
     return {
         "created": d["createdAt"],
@@ -140,6 +175,7 @@ def fetch_stats(token):
         "commits": commits,
         "additions": adds,
         "deletions": dels,
+        "per_repo": per_repo,
     }
 
 
@@ -259,11 +295,16 @@ def render(theme, stats, art, up):
 def main():
     cache = ASSETS / "stats.json"
     token = os.environ.get("ACCESS_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    prev = json.loads(cache.read_text(encoding="utf-8")) if cache.exists() else {}
+    stats = prev
     if token:
-        stats = fetch_stats(token)
-        cache.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
-    else:
-        stats = json.loads(cache.read_text(encoding="utf-8"))
+        try:
+            stats = fetch_stats(token, prev)
+            cache.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
+        except Exception as e:
+            if not prev:
+                raise
+            print(f"warning: stats fetch failed ({e}); rendering cached stats", file=sys.stderr)
 
     today = date.today()
     start = BIRTHDAY or datetime.fromisoformat(stats["created"].replace("Z", "+00:00")).date()
