@@ -202,5 +202,5 @@ card("truthbox", "05", "Truthbox", "HACKATHON · TRUST", RED,
 card("tarang", "06", "Tarang", "SIH 2026 · HYDROLOGY", ORANGE,
      ["Flash-flood early warning for Himalayan", "catchments. Physical terrain + hydrology",
       "model forecasts the peak per settlement."],
-     ["Python", "NumPy", "Flask"], "PROTOTYPE")
+     ["Python", "NumPy", "Flask", "React"], "PROTOTYPE")
 print("wrote", sorted(p.name for p in OUT.iterdir()))
