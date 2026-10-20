@@ -188,8 +188,7 @@ var me = Engineer{
 <img src="assets/divider.svg" width="100%" alt=""/>
 
 <div align="center">
-
-**Class Representative, all three years of diploma** &nbsp;·&nbsp; English, Telugu, Hindi
+ &nbsp;·&nbsp; English, Telugu, Hindi
 
 <sub>Open to interesting systems problems and teams that ship. Say hi at <a href="mailto:nandakishorereddyg@outlook.com">nandakishorereddyg@outlook.com</a>.</sub>
 
