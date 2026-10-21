@@ -1,12 +1,12 @@
 {
   "created": "2023-05-11T17:08:14Z",
-  "repos": 16,
+  "repos": 17,
   "contributed": 1,
   "stars": 3,
   "followers": 7,
-  "commits": 939,
-  "additions": 217202,
-  "deletions": 20916,
+  "commits": 950,
+  "additions": 225025,
+  "deletions": 21349,
   "per_repo": {
     "N9601/algowizard": {
       "commits": 98,
@@ -64,9 +64,9 @@
       "deletions": 362
     },
     "N9601/N9601": {
-      "commits": 11,
-      "additions": 2020,
-      "deletions": 285
+      "commits": 12,
+      "additions": 2021,
+      "deletions": 287
     },
     "N9601/anumati": {
       "commits": 2,
@@ -82,6 +82,11 @@
       "commits": 147,
       "additions": 22963,
       "deletions": 1743
+    },
+    "N9601/gdgc-art-studio": {
+      "commits": 10,
+      "additions": 7822,
+      "deletions": 431
     }
   }
 }
