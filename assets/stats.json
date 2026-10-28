@@ -1,11 +1,11 @@
 {
   "created": "2023-05-11T17:08:14Z",
-  "repos": 18,
+  "repos": 19,
   "contributed": 1,
   "stars": 3,
   "followers": 7,
-  "commits": 955,
-  "additions": 226847,
+  "commits": 956,
+  "additions": 242921,
   "deletions": 21399,
   "per_repo": {
     "N9601/algowizard": {
@@ -92,6 +92,11 @@
       "commits": 2,
       "additions": 1370,
       "deletions": 4
+    },
+    "N9601/Java-cbp": {
+      "commits": 1,
+      "additions": 16074,
+      "deletions": 0
     }
   }
 }
