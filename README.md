@@ -38,162 +38,24 @@
 package main
 
 type Engineer struct {
-    Name      string
-    Role      string
-    Base      string
-    Education []string
-    Builds    []string
-    Ships     []string
-    OffClock  []string
+	Name      string
+	Role      string
+	Base      string
+	Education []string
+	Builds    []string
+	Ships     []string
+	OffClock  []string
 }
 
 var me = Engineer{
-    Name: "Gadusatla Nandakishore Reddy",
-    Role: "Software Engineer, Full-Stack & AI Automation @ Verge Scales",
-    Base: "Hyderabad, IN (IST)",
-    Education: []string{
-        "B.Tech CSE @ VNR VJIET (2026 - present)",
-        "Diploma CSE @ TRR, CGPA 9.18 / 10, top 1% of cohort",
-    },
-    Builds:   []string{"LSM-tree storage engines", "x86 kernels", "LLM pipelines"},
-    Ships:    []string{"payroll", "order operations", "marketing intelligence"},
-    OffClock: []string{"perf tuning", "custom Android ROMs", "music", "films", "photography"},
+	Name: "Gadusatla Nandakishore Reddy",
+	Role: "Software Engineer, Full-Stack & AI Automation @ Verge Scales",
+	Base: "Hyderabad, IN (IST)",
+	Education: []string{
+		"B.Tech CSE @ VNR VJIET (2026 - present)",
+		"Diploma CSE @ TRR, CGPA 9.15 / 10, top 1% of cohort",
+	},
+	Builds:   []string{"LSM-tree storage engines", "x86 kernels", "LLM pipelines"},
+	Ships:    []string{"payroll", "order operations", "marketing intelligence"},
+	OffClock: []string{"perf tuning", "custom Android ROMs", "music", "films", "photography"},
 }
-```
-
-<img src="assets/divider.svg" width="100%" alt=""/>
-
-### `$ cat ./now.log`
-
-> Joined **Verge Scales** in Jan 2026 and stayed on the team as annual revenue grew from **5-figure to 8-figure**, splitting time between engineering, operations and customer support.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-#### `OrderFlow` &nbsp;·&nbsp; order-operations platform
-<sub>Jun 2026 - present &nbsp;·&nbsp; TypeScript, React, Express, Drizzle, Postgres, Vercel</sub>
-
-- **Payroll module, end to end.** Attendance syncs nightly to RazorpayX in concurrent batches to fit Vercel's 30s limit; variable pay auto-computed from delivery, return and reshipment metrics; PDF payslips.
-- **Reshipments workflow.** Schema, Shopify order creation, webhooks, audit trail and a six-status lifecycle, with fallbacks when Shopify is missing the parent order.
-- **Nightly reconciliation** against Delhivery that detects and repairs stalled shipments across stores.
-
-</td>
-<td width="50%" valign="top">
-
-#### `Creative Strategy HQ` &nbsp;·&nbsp; marketing platform
-<sub>May - Jun 2026 &nbsp;·&nbsp; TypeScript, React, Supabase, n8n, OpenRouter</sub>
-
-- **Viral-content discovery.** Swipe-to-approve queue refilled by n8n webhooks; rejects are blacklisted forever.
-- **LLM scoring.** Gemini Flash via OpenRouter scores ads and generates keywords that feed every future scan.
-- **Auth and RLS.** Email OTP, Google OAuth, role-based access, Postgres row-level security, expiring team invites.
-- **n8n agents.** Claude-powered research briefs with web search, written to Google Docs atomically.
-
-</td>
-</tr>
-</table>
-
-<img src="assets/divider.svg" width="100%" alt=""/>
-
-### `$ ls ./builds`
-
-<table>
-<tr>
-<td><a href="https://github.com/N9601/SolderDB"><img src="assets/card-solderdb.svg" width="100%" alt="SolderDB"/></a></td>
-<td><a href="https://github.com/N9601/PyroOS"><img src="assets/card-pyroos.svg" width="100%" alt="PyroOS"/></a></td>
-</tr>
-<tr>
-<td><a href="https://github.com/N9601/FlowCAD"><img src="assets/card-flowcad.svg" width="100%" alt="FlowCAD"/></a></td>
-<td><a href="https://github.com/N9601/algowizard"><img src="assets/card-algowizard.svg" width="100%" alt="AlgoWizard"/></a></td>
-</tr>
-<tr>
-<td><a href="https://n9601.github.io/IQOO2k26/"><img src="assets/card-truthbox.svg" width="100%" alt="Truthbox"/></a></td>
-<td><a href="https://github.com/N9601/Tarang"><img src="assets/card-tarang.svg" width="100%" alt="Tarang"/></a></td>
-</tr>
-</table>
-
-<details>
-<summary><b>Inside SolderDB</b> &nbsp;<sub>(click to expand)</sub></summary>
-<br/>
-
-```text
-  write ──► WAL (CRC32C, torn-write recovery)
-              │
-              ▼
-          memtable ──flush──► L0 SSTables ──leveled compaction──► L1 ... Ln
-              ▲                    │
-              │              bloom filters guard every disk read
-  read  ──────┘
-```
-
-- PocketBase / Supabase-style backend on top: collections with access rules, bcrypt + HMAC-SHA256 auth, blob storage, realtime over SSE, REST API, JS and Go SDKs.
-- Ships as a single Wails desktop executable with a React control center and a live memtable-flush visualizer.
-- Compaction backs off under battery or thermal pressure.
-
-</details>
-
-<details>
-<summary><b>More repos</b></summary>
-<br/>
-
-| Repo | What it is | Stack |
-|---|---|---|
-| [**Cinder**](https://github.com/N9601/Cinder) | Chrome extension that turns YouTube videos into Obsidian notes via Gemini, with `[[wikilinks]]` into your existing vault | JavaScript, Gemini, Chrome MV3 |
-| [**Akashavani**](https://github.com/N9601/Skyscanner-Rebuild) &nbsp;<sub>[live](https://akashavani-mauve.vercel.app)</sub> | Travel meta-search rebuild for the RE:BUILD hackathon: flights, stays, cars, price alerts, AI assistant | React, TypeScript, TanStack Query, Zustand |
-| [**Truthbox**](https://github.com/N9601/IQOO2k26) &nbsp;<sub>[live](https://n9601.github.io/IQOO2k26/)</sub> | Source for the card above, iQOO Hackathon 2026 | JavaScript, WebCrypto |
-| [**Personal Portfolio**](https://github.com/N9601/personal-portfolio-final) &nbsp;<sub>[live](https://personal-portfolio-five-liard-62.vercel.app)</sub> | Exploded-motherboard hero in Three.js with hand-written GLSL PCB-trace shaders and cursor-magnetic physics | Next.js, Three.js, GLSL, GSAP |
-
-</details>
-
-<img src="assets/divider.svg" width="100%" alt=""/>
-
-### `$ stack --all`
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=go,ts,js,java,py,c,cpp,cs,bash,postgres,supabase,react,nextjs,nodejs,express,dotnet,threejs,tailwind,vercel,cloudflare,aws,docker,nginx,linux,git,githubactions,vscode&theme=dark&perline=9" alt="tech stack"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/x86_Assembly-080808?style=flat-square&logo=intel&logoColor=0066FF" alt="x86 Assembly"/>
-  <img src="https://img.shields.io/badge/QEMU-080808?style=flat-square&logo=qemu&logoColor=FF5500" alt="QEMU"/>
-  <img src="https://img.shields.io/badge/Wails-080808?style=flat-square&logo=wails&logoColor=FF1133" alt="Wails"/>
-  <img src="https://img.shields.io/badge/Drizzle_ORM-080808?style=flat-square&logo=drizzle&logoColor=C5F74F" alt="Drizzle"/>
-  <img src="https://img.shields.io/badge/n8n-080808?style=flat-square&logo=n8n&logoColor=EA4B71" alt="n8n"/>
-  <img src="https://img.shields.io/badge/OpenRouter-080808?style=flat-square&logo=openai&logoColor=F5F5F5" alt="OpenRouter"/>
-  <img src="https://img.shields.io/badge/Claude-080808?style=flat-square&logo=anthropic&logoColor=D97757" alt="Claude"/>
-  <img src="https://img.shields.io/badge/Gemini-080808?style=flat-square&logo=googlegemini&logoColor=8E75B2" alt="Gemini"/>
-  <img src="https://img.shields.io/badge/GLSL-080808?style=flat-square&logo=opengl&logoColor=0066FF" alt="GLSL"/>
-  <img src="https://img.shields.io/badge/Shopify_API-080808?style=flat-square&logo=shopify&logoColor=7AB55C" alt="Shopify"/>
-  <img src="https://img.shields.io/badge/RazorpayX-080808?style=flat-square&logo=razorpay&logoColor=3395FF" alt="RazorpayX"/>
-</p>
-
-<img src="assets/divider.svg" width="100%" alt=""/>
-
-### `$ git log --stat`
-
-<p align="center">
-  <img src="assets/stats-card.svg" height="165" alt="GitHub stats"/>
-  <img src="assets/langs-card.svg" height="165" alt="Top languages"/>
-</p>
-
-<p align="center">
-  <img src="assets/streak.svg" alt="Contribution streak"/>
-</p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/N9601/N9601/output/snake-dark.svg"/>
-  <img src="https://raw.githubusercontent.com/N9601/N9601/output/snake.svg" width="100%" alt="contribution snake"/>
-</picture>
-
-<img src="assets/divider.svg" width="100%" alt=""/>
-
-<div align="center">
- &nbsp;·&nbsp; English, Telugu, Hindi
-
-<sub>Open to interesting systems problems and teams that ship. Say hi at <a href="mailto:nandakishorereddyg@outlook.com">nandakishorereddyg@outlook.com</a>.</sub>
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=N9601&color=0066ff&style=flat-square&label=PROFILE+VIEWS" alt="profile views"/>
-
-</div>
