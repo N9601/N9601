@@ -38,24 +38,24 @@
 package main
 
 type Engineer struct {
-	Name      string
-	Role      string
-	Base      string
-	Education []string
-	Builds    []string
-	Ships     []string
-	OffClock  []string
+    Name      string
+    Role      string
+    Base      string
+    Education []string
+    Builds    []string
+    Ships     []string
+    OffClock  []string
 }
 
 var me = Engineer{
-	Name: "Gadusatla Nandakishore Reddy",
-	Role: "Software Engineer, Full-Stack & AI Automation @ Verge Scales",
-	Base: "Hyderabad, IN (IST)",
-	Education: []string{
-		"B.Tech CSE @ VNR VJIET (2026 - present)",
-		"Diploma CSE @ TRR, CGPA 9.15 / 10, top 1% of cohort",
-	},
-	Builds:   []string{"LSM-tree storage engines", "x86 kernels", "LLM pipelines"},
-	Ships:    []string{"payroll", "order operations", "marketing intelligence"},
-	OffClock: []string{"perf tuning", "custom Android ROMs", "music", "films", "photography"},
+    Name: "Gadusatla Nandakishore Reddy",
+    Role: "Software Engineer, Full-Stack & AI Automation @ Verge Scales",
+    Base: "Hyderabad, IN (IST)",
+    Education: []string{
+        "B.Tech CSE @ VNR VJIET (2026 - present)",
+        "Diploma CSE @ TRR, CGPA 9.18 / 10, top 1% of cohort",
+    },
+    Builds:   []string{"LSM-tree storage engines", "x86 kernels", "LLM pipelines"},
+    Ships:    []string{"payroll", "order operations", "marketing intelligence"},
+    OffClock: []string{"perf tuning", "custom Android ROMs", "music", "films", "photography"},
 }
